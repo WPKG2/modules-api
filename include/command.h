@@ -8,7 +8,7 @@
 // Command struct
 struct Command {
     char *name;
-    int *min_args;
+    int min_args;
     char *(*function)(int argc, char **argv);
 };
 
