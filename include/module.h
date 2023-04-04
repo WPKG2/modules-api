@@ -16,6 +16,7 @@ struct Module {
 
     // Commands array
     struct Command *commands;
+    int commands_count;
 };
 
 // Module API function

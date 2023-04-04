@@ -11,7 +11,7 @@ int deinit(void) {
 }
 
 // create command function
-char *command(char **args) {
+char *command() {
     // return string
     return "Hello World!";
 }
@@ -33,6 +33,8 @@ int module_main(struct Module *module) {
     module->deinit = &deinit;
     // set module commands
     module->commands = commands;
+    // set module commands count
+    module->commands_count = sizeof(commands) / sizeof(struct Command);
 
     // return 0 if everything is ok
     return 0;
